@@ -13,20 +13,31 @@ const Button = (props) => {
 
   return (
     <>
-      <div>
-        <button onClick={toggleShowDetails}>{showDetails ? 'Hide Details' : 'See Details'}</button>
-      </div>
+      <StyledButton>
+     <button onClick={toggleShowDetails}>{showDetails ? 'Hide Details' : 'See Details'}</button>
       {showDetails ? 
       <>
-      <div>Origin: {characterDetails.origin.name}</div>
-      <div>Species: {characterDetails.species}</div>
-      <div>Location: {characterDetails.location.name}</div>
-      <div>Status: {characterDetails.status}</div> 
+      <div className="stat">Origin: {characterDetails.origin.name}</div>
+      <div className="stat">Species: {characterDetails.species}</div>
+      <div className="stat">Location: {characterDetails.location.name}</div>
+      <div className="stat">Status: {characterDetails.status}</div> 
       </>
       : <div></div>
       }
+      </StyledButton>
     </>
   );
 };
 
+const StyledButton = styled.div`
+
+.stat{
+    color:white;
+    text-emphasis:bold;
+    padding-top:3%;
+    font-size: 0.8em;
+}
+`
+
 export default Button;
+

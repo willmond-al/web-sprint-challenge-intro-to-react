@@ -19,12 +19,20 @@ const Character = (props) =>{
 
 const StyledCharacter = styled.div`
 
+width:30%;
+display:inline-block;
+&:hover{
+    color:darksalmon;
+}
+
+
     h2{
         padding-top:1%;
     }
 
     img{
         border-radius: 20%;
+        width:60%;
     }
 
 `
