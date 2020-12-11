@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from './Button';
 
 const Character = (props) =>{
     const { character } = props
@@ -8,10 +9,8 @@ const Character = (props) =>{
 
         <StyledCharacter>
             <h2>{character.name}</h2>
-            <img src={character.image} />
-            <div className="button">
-            <button>See Details</button>
-            </div>
+            <img src={character.image} alt={`${character.name}`} />
+            <Button characterDetails={character}/>
             
         </StyledCharacter>
 

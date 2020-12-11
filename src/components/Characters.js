@@ -25,6 +25,7 @@ const StyledCharacters = styled.div`
 margin: 2% auto;
 background-color:green;
 width:80%;
+padding: 2% 0;
 `
 
 export default Characters
