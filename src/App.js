@@ -21,8 +21,8 @@ const App = () => {
     axios
 .get('https://rickandmortyapi.com/api/character')
 .then(res => {
-const characterInfo = res.data.results[0]
-  setData(characterInfo)
+setData(res.data.results)
+  
 })
 .catch(err=>{
   console.log('err')
@@ -30,11 +30,12 @@ const characterInfo = res.data.results[0]
 
   }, [])
 
+
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Rick And Morty Characters</h1>
       <div>
-      <Characters key={data.id } data={data}/>
+      <Characters data={data}/>
 
       </div>
     </div>

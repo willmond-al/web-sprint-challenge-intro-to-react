@@ -2,17 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Character = (props) =>{
-    const { data } = props
+    const { character } = props
 
     return(
 
-        <div>
-            {data.name}
-            <img src={data.image} />
+        <StyledCharacter>
+            <h2>{character.name}</h2>
+            <img src={character.image} />
+            
             <button>See Details</button>
-        </div>
+            
+        </StyledCharacter>
 
     )
 }
+
+const StyledCharacter = styled.div`
+
+`
 
 export default Character;
