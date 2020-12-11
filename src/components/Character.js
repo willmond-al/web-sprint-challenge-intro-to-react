@@ -24,6 +24,10 @@ const StyledCharacter = styled.div`
         padding-top:1%;
     }
 
+    img{
+        border-radius: 20%;
+    }
+
 `
 
 export default Character;

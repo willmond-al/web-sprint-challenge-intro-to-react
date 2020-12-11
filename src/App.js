@@ -45,7 +45,15 @@ setData(res.data.results)
 
 const StyledApp = styled.div`
 
+  margin: -25px 0;
+
   text-align:center;
+  background-color:darkgrey;
+
+  .Header{
+    color:white;
+    padding-top:2%;
+  }
 
 `
 
