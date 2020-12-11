@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Characters from './components/Characters';
+import styled from 'styled-components'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -32,14 +33,20 @@ setData(res.data.results)
 
 
   return (
-    <div className="App">
+    <StyledApp>
       <h1 className="Header">Rick And Morty Characters</h1>
       <div>
       <Characters data={data}/>
 
       </div>
-    </div>
+    </StyledApp>
   );
 }
+
+const StyledApp = styled.div`
+
+  text-align:center;
+
+`
 
 export default App;

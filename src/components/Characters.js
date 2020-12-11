@@ -9,16 +9,22 @@ const Characters = (props) => {
 
     return(
         
-        <div className='character-container'>
+        <StyledCharacters>
            { 
            data.map((value, index)=>{
                
            return  <Character key={index} character={value}/>
            })}
-        </div>
+        </StyledCharacters>
     )
     
 
 }
+
+const StyledCharacters = styled.div`
+margin: 2% auto;
+background-color:green;
+width:80%;
+`
 
 export default Characters

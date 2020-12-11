@@ -9,8 +9,9 @@ const Character = (props) =>{
         <StyledCharacter>
             <h2>{character.name}</h2>
             <img src={character.image} />
-            
+            <div className="button">
             <button>See Details</button>
+            </div>
             
         </StyledCharacter>
 
@@ -18,6 +19,10 @@ const Character = (props) =>{
 }
 
 const StyledCharacter = styled.div`
+
+    h2{
+        padding-top:1%;
+    }
 
 `
 
