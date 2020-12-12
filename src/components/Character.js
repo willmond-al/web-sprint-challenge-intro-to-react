@@ -1,40 +1,40 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from './Button';
+import React from "react";
+import styled from "styled-components";
+import Button from "./Button";
 
-const Character = (props) =>{
-    const { character } = props
+const Character = (props) => {
+  const { character } = props;
 
-    return(
-
-        <StyledCharacter>
-            <h2>{character.name}</h2>
-            <img src={character.image} alt={`${character.name}`} />
-            <Button characterDetails={character}/>
-            
-        </StyledCharacter>
-
-    )
-}
+  return (
+    <StyledCharacter>
+      <div className="hover">
+        <h2>{character.name}</h2>
+        <img src={character.image} alt={`${character.name}`} />
+        <Button characterDetails={character} />
+      </div>
+    </StyledCharacter>
+  );
+};
 
 const StyledCharacter = styled.div`
+  width: 30%;
+  display: inline-block;
 
-width:30%;
-display:inline-block;
-&:hover{
-    color:darksalmon;
-}
+  h2 {
+    padding-top: 1%;
+  }
 
+  img {
+    border-radius: 20%;
+    width: 60%;
+  }
 
-    h2{
-        padding-top:1%;
+  .hover:hover {
+    color: darksalmon;
+    img {
+      border: dashed red 2px;
     }
-
-    img{
-        border-radius: 20%;
-        width:60%;
-    }
-
-`
+  }
+`;
 
 export default Character;

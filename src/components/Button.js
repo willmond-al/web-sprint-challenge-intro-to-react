@@ -14,7 +14,7 @@ const Button = (props) => {
   return (
     <>
       <StyledButton>
-     <button onClick={toggleShowDetails}>{showDetails ? 'Hide Details' : 'See Details'}</button>
+     <button className='button' onClick={toggleShowDetails}>{showDetails ? 'Hide Details' : 'See Details'}</button>
       {showDetails ? 
       <>
       <div className="stat">Origin: {characterDetails.origin.name}</div>
@@ -30,6 +30,10 @@ const Button = (props) => {
 };
 
 const StyledButton = styled.div`
+
+.button:hover{
+    transform: scale(1.2)
+}
 
 .stat{
     color:white;
