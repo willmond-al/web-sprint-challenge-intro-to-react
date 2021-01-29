@@ -16,6 +16,7 @@ const Character = (props) => {
   );
 };
 
+
 const StyledCharacter = styled.div`
   width: 30%;
   display: inline-block;

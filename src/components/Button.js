@@ -38,7 +38,7 @@ const StyledButton = styled.div`
 .stat{
     color:white;
     text-emphasis:bold;
-    padding-top:3%;
+    padding-top:3.1%;
     font-size: 0.8em;
 }
 `
